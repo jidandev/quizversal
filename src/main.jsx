@@ -8,7 +8,7 @@ import QuizPage from './Pages/QuizPage'
 
 const router = createBrowserRouter([
   {
-    path: '/quizversal/',
+    path: '/',
     element: <HomePage  />,
     errorElement: <ErrorPage />
   },
@@ -16,7 +16,9 @@ const router = createBrowserRouter([
     path: '/quiz',
     element: <QuizPage />
   },
-]);
+],{
+  basename: '/quizversal'
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
