@@ -8,7 +8,7 @@ import QuizPage from './Pages/QuizPage'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/quizversal/',
     element: <HomePage  />,
     errorElement: <ErrorPage />
   },
