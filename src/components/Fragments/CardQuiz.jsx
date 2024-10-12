@@ -117,9 +117,16 @@ const Body = ({data = [], score = 0, selesai = false, answer=0, lock = 0, handle
 const Footer = ({nextQuestion, handleLock, selesai}) => {
     return (
         <>
-        {selesai && <Link className="mx-auto mt-8" to="/"><Button onClick={() => {nextQuestion(); handleLock(0);}} classname="bg-green-600 hover:bg-green-700 ">Home</Button></Link> }
-        {!selesai && <Button onClick={() => {nextQuestion(); handleLock(0);}} classname="bg-green-600 hover:bg-green-700 mx-auto mt-8">Next</Button>
-    }
+        {selesai && 
+       
+        <Link className="mx-auto mt-8" to="/"><Button onClick={() => {nextQuestion(); handleLock(0);}} classname="bg-green-600 hover:bg-green-700 ">Home</Button></Link> }
+        {!selesai && 
+        <div className="mx-auto mt-8">
+            <Button onClick={() => {nextQuestion(); handleLock(0);}} classname="bg-green-600 hover:bg-green-700 ">Next</Button>
+            
+        </div>
+        }
+     
         
         </>
     )
